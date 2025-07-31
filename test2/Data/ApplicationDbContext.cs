@@ -13,5 +13,7 @@ namespace test2.Data
 
         public DbSet<Persona> Personas { get; set; } = null!;
 
+        public DbSet<Direccion> Direcciones { get; set; } = null!;
+
     }
 }

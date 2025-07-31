@@ -67,6 +67,17 @@ namespace test2.Controllers
 
             // Consulta API Agify para estimar edad
             var agify = await _http.GetFromJsonAsync<AgiFyResponse>($"https://api.agify.io/?name={dto.Nombre}");
+            // Mostrar propiedades específicas
+            if (agify != null)
+            {
+                Console.WriteLine("📝 Datos deserializados:");
+                Console.WriteLine($"Nombre: {agify.Name}");
+                Console.WriteLine($"Edad estimada: {agify.Age}");
+            }
+            else
+            {
+                Console.WriteLine("No se pudo deserializar la respuesta.");
+            }
 
             // Consulta API Nationalize para estimar nacionalidad
             var national = await _http.GetFromJsonAsync<NationalizeResponse>($"https://api.nationalize.io/?name={dto.Nombre}");

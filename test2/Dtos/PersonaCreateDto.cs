@@ -9,7 +9,7 @@ namespace test2.Dtos
         public string Nombre { get; set; } = string.Empty;
 
         [Required]
-        [EmailAddress(ErrorMessage = "Correo inválido")]
+        [RegularExpression(@"^[\w\.-]+@[\w\.-]+\.\w{2,4}$", ErrorMessage = "El correo no tiene un formato válido")]
         public string Correo { get; set; } = string.Empty;
     }
 }
