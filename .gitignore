@@ -1,0 +1,40 @@
+.vs/
+
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider files
+.idea/
+
+# VS Code files
+.vscode/
+
+# ASP.NET Core Secrets
+secrets.json
+
+# Published files
+*.publish/
+*.db
+
+# Logs
+*.log
+
+# Dependency packages
+packages/
+*.nupkg
+project.lock.json
+
+# Configuration files
+appsettings.*.json
+
+# Others
+.env
